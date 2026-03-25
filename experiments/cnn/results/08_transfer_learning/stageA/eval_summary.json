@@ -1,0 +1,10 @@
+{
+  "run_name": "08_transfer_learning",
+  "stage": "A",
+  "split": "test",
+  "ckpt_path": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/08_transfer_learning/stageA/model_best.pth",
+  "data_dir": "/Users/duhanaydin/cursor/plant disease study/data/processed/full_split",
+  "n_test": 8179,
+  "test_accuracy": 0.9592859762807189,
+  "macro_recall": 0.9490895716825306
+}

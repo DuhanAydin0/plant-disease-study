@@ -1,0 +1,13 @@
+{
+    "accuracy": 0.9072164948453608,
+    "macro_recall": 0.8483049389089657,
+    "weighted_recall": 0.9072164948453608,
+    "macro_f1": 0.8552864627778166,
+    "num_classes": 4,
+    "classes": [
+        "Cercospora_leaf_spot_Gray_leaf_spot",
+        "Common_rust",
+        "Northern_Leaf_Blight",
+        "healthy"
+    ]
+}

@@ -1,0 +1,45 @@
+{
+  "run_name": "08_transfer_learning",
+  "stage": "A",
+  "timestamp": "2026-02-22T23:02:12",
+  "data_dir": "/Users/duhanaydin/cursor/plant disease study/data/processed/full_split",
+  "out_dir": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/08_transfer_learning/stageA",
+  "device": "mps",
+  "num_classes": 38,
+  "hyperparams": {
+    "stage": "A",
+    "max_epochs": 20,
+    "patience": 4,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": {
+      "name": "ReduceLROnPlateau",
+      "monitor": "val_loss",
+      "mode": "min",
+      "factor": 0.5,
+      "patience": 2,
+      "min_lr": 1e-06
+    }
+  },
+  "best": {
+    "epoch": 18,
+    "val_loss": 0.11350571102307928,
+    "val_acc": 0.959281584450732
+  },
+  "ckpt_best": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/08_transfer_learning/stageA/model_best.pth",
+  "ckpt_last": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/08_transfer_learning/stageA/model_last.pth",
+  "init_ckpt": null,
+  "transforms": {
+    "train": "Resize(224,224)+HFlip+Rot(10)+ToTensor+ImageNetNorm",
+    "eval": "Resize(224,224)+ToTensor+ImageNetNorm"
+  },
+  "scheduler": {
+    "name": "ReduceLROnPlateau",
+    "monitor": "val_loss",
+    "mode": "min",
+    "factor": 0.5,
+    "patience": 2,
+    "min_lr": 1e-06
+  }
+}

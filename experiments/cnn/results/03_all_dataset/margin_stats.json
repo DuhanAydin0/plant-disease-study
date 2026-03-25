@@ -1,0 +1,11 @@
+{
+  "margin_definition": "logit top1-top2",
+  "mean_margin_all": 6.495472048052308,
+  "mean_margin_correct": 6.946622460583122,
+  "mean_margin_wrong": 1.0895443271076868,
+  "median_margin_correct": 5.893047332763672,
+  "median_margin_wrong": 0.7152191996574402,
+  "n_total": 8179,
+  "n_correct": 7549,
+  "n_wrong": 630
+}

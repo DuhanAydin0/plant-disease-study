@@ -1,0 +1,16 @@
+KNN 01 Basic - Final Test Results Summary
+============================================================
+
+Model: 01_basic
+
+Dataset Summary:
+  Number of test samples: 2734
+  Number of features: 12288
+
+Final TEST Metrics:
+  Accuracy: 0.6222
+  Precision (weighted): 0.6625
+  Recall (weighted): 0.6222
+  F1-score (weighted): 0.6130
+
+Note: This file was generated automatically after training.

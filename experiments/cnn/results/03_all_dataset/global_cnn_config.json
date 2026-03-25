@@ -1,0 +1,12 @@
+{
+  "model_name": "SimpleCNN",
+  "image_size": 224,
+  "normalize": null,
+  "num_classes": 38,
+  "dataset_root": "/Users/duhanaydin/cursor/plant disease study/data/processed/full_split",
+  "train_dir_used_for_mapping": "/Users/duhanaydin/cursor/plant disease study/data/processed/full_split/train",
+  "class_naming": "Plant___Disease (raw folder name)",
+  "checkpoint_path": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/03_all_dataset/cnn_03_all_dataset_30epochs_model.pth",
+  "out_dir": "/Users/duhanaydin/cursor/plant disease study/experiments/cnn/results/03_all_dataset",
+  "notes": "ImageFolder(full_split/train). Resize(224)+ToTensor. No normalization (assumed)."
+}

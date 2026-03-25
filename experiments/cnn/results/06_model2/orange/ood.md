@@ -1,0 +1,15 @@
+{
+  "plant": "orange",
+  "single_class_name": "Haunglongbing_(Citrus_greening)",
+  "embedding_dim": 512,
+  "threshold_p95": 0.13130329549312592,
+  "threshold_p99": 0.15822669863700867,
+  "threshold_default": 0.13130329549312592,
+  "val_dist_mean": 0.0896885022521019,
+  "val_dist_std": 0.023814842104911804,
+  "test_dist_mean": 0.0879284143447876,
+  "test_dist_std": 0.02199307456612587,
+  "test_flag_rate_over_p95": 0.03627569600939751,
+  "test_flag_rate_over_p99": 0.009673519060015678,
+  "note": "p95 daha agresif, p99 daha konservatif. Deploy'da genelde p99 daha g\u00fcvenli oluyormu\u015f."
+}

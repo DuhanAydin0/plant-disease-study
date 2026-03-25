@@ -1,0 +1,57 @@
+{
+    "plant": "orange",
+    "threshold_choice": "p99",
+    "threshold_value": 0.15822669863700867,
+    "id_test": {
+        "summary": {
+            "n": 827,
+            "mean": 0.0879284143447876,
+            "std": 0.02199307456612587,
+            "p50": 0.08552670478820801,
+            "p90": 0.11634709686040878,
+            "p95": 0.12768538296222687,
+            "p99": 0.15405449271202087,
+            "min": 0.0419689416885376,
+            "max": 0.18479657173156738
+        },
+        "flag_rate_over_threshold": 0.009673519060015678,
+        "n_classes": 1,
+        "classes": [
+            "Haunglongbing_(Citrus_greening)"
+        ]
+    },
+    "ood_test": {
+        "n": 10,
+        "mean": 0.16700708866119385,
+        "std": 0.052388615906238556,
+        "p50": 0.15030252933502197,
+        "p90": 0.23680372536182404,
+        "p95": 0.2596341371536255,
+        "p99": 0.2778984308242798,
+        "min": 0.11799812316894531,
+        "max": 0.28246450424194336,
+        "flag_rate_over_threshold": 0.30000001192092896
+    },
+    "ood_top_examples": [
+        {
+            "dist": 0.28246450424194336,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_orange/ood_test/image (8).JPG"
+        },
+        {
+            "dist": 0.23173034191131592,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_orange/ood_test/17.JPG"
+        },
+        {
+            "dist": 0.1841435432434082,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_orange/ood_test/image (52).JPG"
+        },
+        {
+            "dist": 0.1517857313156128,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_orange/ood_test/image (74).JPG"
+        },
+        {
+            "dist": 0.15071606636047363,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_orange/ood_test/image (59).JPG"
+        }
+    ]
+}

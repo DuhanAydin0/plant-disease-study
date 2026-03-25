@@ -1,0 +1,11 @@
+{
+    "accuracy": 0.9745762711864406,
+    "macro_recall": 0.9607741039659811,
+    "weighted_recall": 0.9745762711864406,
+    "macro_f1": 0.968736200653537,
+    "num_classes": 2,
+    "classes": [
+        "Leaf_scorch",
+        "healthy"
+    ]
+}

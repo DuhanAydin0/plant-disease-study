@@ -1,0 +1,11 @@
+{
+    "accuracy": 0.9900249376558603,
+    "macro_recall": 0.9789280084077772,
+    "weighted_recall": 0.9900249376558603,
+    "macro_f1": 0.9789280084077772,
+    "num_classes": 2,
+    "classes": [
+        "Bacterial_spot",
+        "healthy"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "model_name": "SimpleCNN",
+  "image_size": 224,
+  "normalize": null,
+  "num_classes": 14,
+  "notes": "Resize(224) + ToTensor, no normalization"
+}

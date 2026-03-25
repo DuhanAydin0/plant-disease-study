@@ -1,0 +1,15 @@
+{
+    "plant": "soybean",
+    "single_class_name": "healthy",
+    "embedding_dim": 512,
+    "threshold_p95": 0.11869160085916519,
+    "threshold_p99": 0.1496604084968567,
+    "threshold_default": 0.11869160085916519,
+    "val_dist_mean": 0.07467149198055267,
+    "val_dist_std": 0.026827862486243248,
+    "test_dist_mean": 0.07474931329488754,
+    "test_dist_std": 0.022796345874667168,
+    "test_flag_rate_over_p95": 0.0445026196539402,
+    "test_flag_rate_over_p99": 0.006544502452015877,
+    "note": "p95 daha agresif, p99 daha konservatif. Deploy'da genelde p99 daha g\u00fcvenli oluyormu\u015f."
+}

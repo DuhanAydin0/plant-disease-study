@@ -1,0 +1,9 @@
+{
+  "mean_margin_correct": 1.0934745331914029,
+  "mean_margin_wrong": 1.01590767550005,
+  "median_margin_correct": 1.0040836495643646,
+  "median_margin_wrong": 1.0011407629208549,
+  "n_correct": 7695,
+  "n_wrong": 484,
+  "margin_definition": "SVM decision_function top1-top2 (multiclass) or abs(score) (binary)"
+}

@@ -1,0 +1,11 @@
+{
+    "accuracy": 0.9930555555555556,
+    "macro_recall": 0.9937106918238994,
+    "weighted_recall": 0.9930555555555556,
+    "macro_f1": 0.9929892891918208,
+    "num_classes": 2,
+    "classes": [
+        "Powdery_mildew",
+        "healthy"
+    ]
+}

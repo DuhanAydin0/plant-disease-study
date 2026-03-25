@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+data/
+datasets/
+*.zip
+
+# Model artifacts
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.keras
+*.onnx
+*.joblib
+*.pkl
+*.pickle
+
+# Large arrays
+*.npy
+*.npz
+
+# Logs
+*.log

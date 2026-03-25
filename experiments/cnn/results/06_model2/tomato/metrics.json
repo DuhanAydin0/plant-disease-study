@@ -1,0 +1,19 @@
+{
+    "accuracy": 0.8811265544989028,
+    "macro_recall": 0.8357109910231248,
+    "weighted_recall": 0.8811265544989028,
+    "macro_f1": 0.8430442427519994,
+    "num_classes": 10,
+    "classes": [
+        "Bacterial_spot",
+        "Early_blight",
+        "Late_blight",
+        "Leaf_Mold",
+        "Septoria_leaf_spot",
+        "Spider_mites_Two-spotted_spider_mite",
+        "Target_Spot",
+        "Tomato_Yellow_Leaf_Curl_Virus",
+        "Tomato_mosaic_virus",
+        "healthy"
+    ]
+}

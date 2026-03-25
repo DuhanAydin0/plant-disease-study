@@ -1,0 +1,12 @@
+{
+    "accuracy": 0.9691358024691358,
+    "macro_recall": 0.9194444444444444,
+    "weighted_recall": 0.9691358024691358,
+    "macro_f1": 0.9447729278812368,
+    "num_classes": 3,
+    "classes": [
+        "Early_blight",
+        "Late_blight",
+        "healthy"
+    ]
+}

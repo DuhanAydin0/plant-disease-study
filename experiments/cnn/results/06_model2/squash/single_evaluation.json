@@ -1,0 +1,57 @@
+{
+    "plant": "squash",
+    "threshold_choice": "p99",
+    "threshold_value": 0.17155775427818298,
+    "id_test": {
+        "summary": {
+            "n": 276,
+            "mean": 0.10180459171533585,
+            "std": 0.02542806789278984,
+            "p50": 0.09761568903923035,
+            "p90": 0.13841316103935242,
+            "p95": 0.14990341663360596,
+            "p99": 0.16877396404743195,
+            "min": 0.05099606513977051,
+            "max": 0.17523372173309326
+        },
+        "flag_rate_over_threshold": 0.010869565419852734,
+        "n_classes": 1,
+        "classes": [
+            "Powdery_mildew"
+        ]
+    },
+    "ood_test": {
+        "n": 10,
+        "mean": 0.21197906136512756,
+        "std": 0.03043125942349434,
+        "p50": 0.21181678771972656,
+        "p90": 0.24517908692359924,
+        "p95": 0.25346842408180237,
+        "p99": 0.260099858045578,
+        "min": 0.15783929824829102,
+        "max": 0.2617577314376831,
+        "flag_rate_over_threshold": 0.8999999761581421
+    },
+    "ood_top_examples": [
+        {
+            "dist": 0.2617577314376831,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_squash/ood_test/image (104).JPG"
+        },
+        {
+            "dist": 0.24333703517913818,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_squash/ood_test/image (123).JPG"
+        },
+        {
+            "dist": 0.23071539402008057,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_squash/ood_test/image (103).JPG"
+        },
+        {
+            "dist": 0.22678029537200928,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_squash/ood_test/image (125).JPG"
+        },
+        {
+            "dist": 0.21608757972717285,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_squash/ood_test/image (90).JPG"
+        }
+    ]
+}

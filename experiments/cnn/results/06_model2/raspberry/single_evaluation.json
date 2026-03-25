@@ -1,0 +1,45 @@
+{
+    "plant": "raspberry",
+    "threshold_choice": "default",
+    "threshold_value": 0.09761746227741241,
+    "id_test": {
+        "summary": {
+            "n": 57,
+            "mean": 0.05309708043932915,
+            "std": 0.015575115568935871,
+            "p50": 0.04981428384780884,
+            "p90": 0.06968869268894196,
+            "p95": 0.07653222233057022,
+            "p99": 0.1059575080871582,
+            "min": 0.027535974979400635,
+            "max": 0.10885822772979736
+        },
+        "flag_rate_over_threshold": 0.035087719559669495,
+        "n_classes": 1,
+        "classes": [
+            "healthy"
+        ]
+    },
+    "ood_test": {
+        "n": 2,
+        "mean": 0.13698145747184753,
+        "std": 0.07441376149654388,
+        "p50": 0.13698145747184753,
+        "p90": 0.17907623946666718,
+        "p95": 0.18433807790279388,
+        "p99": 0.18854756653308868,
+        "min": 0.08436298370361328,
+        "max": 0.1895999312400818,
+        "flag_rate_over_threshold": 0.5
+    },
+    "ood_top_examples": [
+        {
+            "dist": 0.1895999312400818,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_raspberry/ood_test/image (7).JPG"
+        },
+        {
+            "dist": 0.08436298370361328,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_raspberry/ood_test/image (15).JPG"
+        }
+    ]
+}

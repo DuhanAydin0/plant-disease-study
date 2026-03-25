@@ -1,0 +1,57 @@
+{
+    "plant": "blueberry",
+    "threshold_choice": "p99",
+    "threshold_value": 0.15856365859508514,
+    "id_test": {
+        "summary": {
+            "n": 226,
+            "mean": 0.08434128761291504,
+            "std": 0.02165246196091175,
+            "p50": 0.08105039596557617,
+            "p90": 0.11372959613800049,
+            "p95": 0.12359283864498138,
+            "p99": 0.14617584645748138,
+            "min": 0.04729282855987549,
+            "max": 0.15605783462524414
+        },
+        "flag_rate_over_threshold": 0.0,
+        "n_classes": 1,
+        "classes": [
+            "healthy"
+        ]
+    },
+    "ood_test": {
+        "n": 12,
+        "mean": 0.17925189435482025,
+        "std": 0.07410509139299393,
+        "p50": 0.16812250018119812,
+        "p90": 0.24516183137893677,
+        "p95": 0.2935284376144409,
+        "p99": 0.33941593766212463,
+        "min": 0.1048625111579895,
+        "max": 0.3508877754211426,
+        "flag_rate_over_threshold": 0.5833333134651184
+    },
+    "ood_top_examples": [
+        {
+            "dist": 0.3508877754211426,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_blueberry/ood_test/image (28).JPG"
+        },
+        {
+            "dist": 0.24659812450408936,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_blueberry/ood_test/image (42).JPG"
+        },
+        {
+            "dist": 0.23223519325256348,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_blueberry/ood_test/image (73).JPG"
+        },
+        {
+            "dist": 0.22469735145568848,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_blueberry/ood_test/image (80).JPG"
+        },
+        {
+            "dist": 0.18802917003631592,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_blueberry/ood_test/image (67).JPG"
+        }
+    ]
+}

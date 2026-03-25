@@ -1,0 +1,13 @@
+{
+    "accuracy": 0.9624217118997912,
+    "macro_recall": 0.9605913913988815,
+    "weighted_recall": 0.9624217118997912,
+    "macro_f1": 0.9598697312243041,
+    "num_classes": 4,
+    "classes": [
+        "Apple_scab",
+        "Black_rot",
+        "Cedar_apple_rust",
+        "healthy"
+    ]
+}

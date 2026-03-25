@@ -1,0 +1,34 @@
+{
+  "image_size": [
+    224,
+    224
+  ],
+  "normalize_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalize_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "embedding_dim": 128,
+  "embedding_layer": "classifier[1]+ReLU (pre-dropout)",
+  "l2_normalize": true,
+  "cnn_ckpt": "experiments/cnn/results/03_all_dataset/cnn_03_all_dataset_30epochs_model.pth",
+  "model_def_file": "experiments/cnn/runs/03_all_dataset/cnn_03_all_model.py",
+  "data_split_rel": "data/processed/full_split",
+  "svm": {
+    "C": 10.0,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "class_weight": "balanced",
+    "probability": true
+  },
+  "dataloader": {
+    "batch_size": 32,
+    "num_workers": 2,
+    "shuffle": false
+  }
+}

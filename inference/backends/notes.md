@@ -1,0 +1,1 @@
+single bitkilerin json predict dosyasında disease confidence değerini null bastırıyorum çünkü o pipeline'da softmax/olasılık üreten bir classifier yok yani % kaç eminim diye yorumlanabilecek probability üretilmiyor.

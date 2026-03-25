@@ -1,0 +1,15 @@
+{
+    "plant": "blueberry",
+    "single_class_name": "healthy",
+    "embedding_dim": 512,
+    "threshold_p95": 0.1191619411110878,
+    "threshold_p99": 0.15856365859508514,
+    "threshold_default": 0.1191619411110878,
+    "val_dist_mean": 0.08517291396856308,
+    "val_dist_std": 0.0218280628323555,
+    "test_dist_mean": 0.08434128761291504,
+    "test_dist_std": 0.02165246196091175,
+    "test_flag_rate_over_p95": 0.05752212554216385,
+    "test_flag_rate_over_p99": 0.0,
+    "note": "p95 daha agresif, p99 daha konservatif. Deploy'da genelde p99 daha g\u00fcvenli oluyormu\u015f."
+}

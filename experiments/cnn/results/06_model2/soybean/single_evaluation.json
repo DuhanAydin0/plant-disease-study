@@ -1,0 +1,45 @@
+{
+    "plant": "soybean",
+    "threshold_choice": "default",
+    "threshold_value": 0.11869160085916519,
+    "id_test": {
+        "summary": {
+            "n": 764,
+            "mean": 0.07474931329488754,
+            "std": 0.022796345874667168,
+            "p50": 0.07177859544754028,
+            "p90": 0.1028023287653923,
+            "p95": 0.11537303030490875,
+            "p99": 0.14376750588417053,
+            "min": 0.030317366123199463,
+            "max": 0.26081496477127075
+        },
+        "flag_rate_over_threshold": 0.0445026196539402,
+        "n_classes": 1,
+        "classes": [
+            "healthy"
+        ]
+    },
+    "ood_test": {
+        "n": 2,
+        "mean": 0.14181014895439148,
+        "std": 0.0458403043448925,
+        "p50": 0.14181014895439148,
+        "p90": 0.1677413433790207,
+        "p95": 0.1709827333688736,
+        "p99": 0.17357586324214935,
+        "min": 0.10939615964889526,
+        "max": 0.1742241382598877,
+        "flag_rate_over_threshold": 0.5
+    },
+    "ood_top_examples": [
+        {
+            "dist": 0.1742241382598877,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_soybean/ood_test/image (31).JPG"
+        },
+        {
+            "dist": 0.10939615964889526,
+            "path": "/Users/duhanaydin/cursor/plant disease study/data/processed/model2_soybean/ood_test/image (40).JPG"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+numpy
+pillow
+scikit-learn
+joblib
+flask
+werkzeug
+streamlit
+requests
+
+# PyTorch ecosystem (CPU, macOS compatible)
+torch
+torchvision
+torchaudio
