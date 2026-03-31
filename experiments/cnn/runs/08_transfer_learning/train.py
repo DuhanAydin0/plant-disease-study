@@ -58,11 +58,11 @@ def seed_everything(seed: int = 42) -> None:
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-    # ✅ UPDATED: CUDA-only calls should be guarded (Mac MPS/CPU'da gereksiz warning/overhead olmasın)
+    
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-    # ✅ UPDATED: cudnn flags only matter on CUDA
+   
     if torch.cuda.is_available():
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
@@ -72,7 +72,7 @@ def ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
 
 
-# UPDATED: accuracy-only yerine loss+acc dönen eval fonksiyonu
+
 @torch.no_grad()
 def eval_metrics(
     model: nn.Module,
@@ -127,7 +127,7 @@ def save_class_maps(out_dir: Path, dataset: datasets.ImageFolder) -> None:
     (out_dir / "classes.json").write_text(json.dumps(classes, indent=2, ensure_ascii=False))
 
 
-#  UPDATED: LR loglamak için helper (Stage A / Stage B uyumlu)
+#   LR loglamak için helper 
 def get_current_lrs(optimizer: torch.optim.Optimizer) -> Dict[str, float]:
     """
     Stage A: {"lr": ...}
@@ -158,7 +158,7 @@ def train_one_experiment(stage: str) -> None:
             lr=1e-3,
             weight_decay=1e-4,
 
-            # ✅ UPDATED: scheduler ayarları (val_loss plato -> LR düşür)
+            #  scheduler ayarları (val_loss plato -> LR düşür)
             scheduler=dict(
                 name="ReduceLROnPlateau",
                 monitor="val_loss",
@@ -178,7 +178,7 @@ def train_one_experiment(stage: str) -> None:
             lr_fc=1e-4,
             weight_decay=1e-4,
 
-            # ✅ UPDATED: scheduler ayarları (val_loss plato -> LR düşür)
+            # scheduler ayarları (val_loss plato -> LR düşür)
             scheduler=dict(
                 name="ReduceLROnPlateau",
                 monitor="val_loss",
@@ -268,7 +268,7 @@ def train_one_experiment(stage: str) -> None:
         pin_memory=True,
     )
 
-    # ✅ UPDATED: ReduceLROnPlateau scheduler (val_loss izleyecek)
+    # ReduceLROnPlateau scheduler (val_loss izleyecek)
     sched_cfg = cfg.get("scheduler", {})
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer,
@@ -282,8 +282,7 @@ def train_one_experiment(stage: str) -> None:
     # -----------------------
     # Train loop + Early stopping
     # -----------------------
-    # UPDATED: Early stopping ve best checkpoint kriterini val_loss yaptık.
-    # Neden: accuracy plateau iken model confidence overfit yapabilir; loss bunu yakalar.
+    #  Early stopping ve best checkpoint kriterini val_loss yaptım.
     best_val_loss = float("inf")
     best_val_acc = -1.0  # config raporunda dursun
     best_epoch = -1
@@ -317,16 +316,16 @@ def train_one_experiment(stage: str) -> None:
         train_loss = running_loss / max(total, 1)
         train_acc = correct / max(total, 1)
 
-        #  UPDATED: val_loss + val_acc aynı anda hesaplanıyor
+        
         val_loss, val_acc = eval_metrics(model, val_loader, device, criterion)
 
-        #  UPDATED: scheduler step (val_loss üzerinden)
+        
         scheduler.step(val_loss)
 
-        #  UPDATED: LR logla (Stage A/B uyumlu)
+        
         lrs = get_current_lrs(optimizer)
 
-        #  UPDATED: early stopping criterion = val_loss
+        # early stopping criterion = val_loss
         is_best = False
         if val_loss < best_val_loss - 1e-6:
             best_val_loss = val_loss
@@ -341,7 +340,6 @@ def train_one_experiment(stage: str) -> None:
         # checkpoint last
         torch.save(model.state_dict(), last_path)
 
-        #  UPDATED: daha açıklayıcı log (val_loss + lr + bad_epochs)
         if "lr" in lrs:
             lr_str = f"lr={lrs['lr']:.2e}"
         else:
@@ -358,12 +356,12 @@ def train_one_experiment(stage: str) -> None:
             "epoch": epoch,
             "train_loss": train_loss,
             "train_acc": train_acc,
-            "val_loss": val_loss,          # UPDATED
+            "val_loss": val_loss,          
             "val_acc": val_acc,
-            "bad_epochs": bad_epochs,      # UPDATED
-            "is_best": int(is_best),       # UPDATED
+            "bad_epochs": bad_epochs,      
+            "is_best": int(is_best),       
         }
-        #  UPDATED: LR kolonlarını history'ye ekle
+        # LR kolonlarını history'ye ekle
         history_row.update(lrs)
         history_rows.append(history_row)
 
@@ -388,9 +386,9 @@ def train_one_experiment(stage: str) -> None:
         "num_classes": num_classes,
         "hyperparams": cfg,
         "best": {
-            "epoch": best_epoch,                #  UPDATED
-            "val_loss": best_val_loss,          #  UPDATED
-            "val_acc": best_val_acc,            #  UPDATED
+            "epoch": best_epoch,               
+            "val_loss": best_val_loss,          
+            "val_acc": best_val_acc,          
         },
         "ckpt_best": str(best_path),
         "ckpt_last": str(last_path),
@@ -399,13 +397,12 @@ def train_one_experiment(stage: str) -> None:
             "train": "Resize(224,224)+HFlip+Rot(10)+ToTensor+ImageNetNorm",
             "eval": "Resize(224,224)+ToTensor+ImageNetNorm",
         },
-        #  UPDATED: scheduler bilgisi config'e yazılsın ki GitHub story’de net olsun
+        
         "scheduler": cfg.get("scheduler", None),
     }
     (out_dir / "train_config.json").write_text(json.dumps(config_out, indent=2, ensure_ascii=False))
 
-    #  UPDATED: CSV kolonları genişledi (val_loss + lr + is_best + bad_epochs)
-    # fieldnames'i dinamik kuruyoruz (Stage A/B LR farkı sorun olmasın)
+    
     fieldnames = ["epoch", "train_loss", "train_acc", "val_loss", "val_acc", "bad_epochs", "is_best"]
     # LR kolonları
     if stage.upper() == "A":
@@ -417,7 +414,7 @@ def train_one_experiment(stage: str) -> None:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
         for r in history_rows:
-            # CSV’de olmayan extra key varsa sorun olmasın diye sadece fieldnames'i al
+        
             w.writerow({k: r.get(k) for k in fieldnames})
 
     print(f"[{stage.upper()}] Saved: {best_path}")
