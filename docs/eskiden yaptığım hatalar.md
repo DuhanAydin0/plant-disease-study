@@ -2,7 +2,7 @@
 
 ## Arka Plan
 
-Bu projeyi ilk olarak,öğrenciyken, CNN ve klasik makine öğrenmesi yöntemleriyle henüz yeterli pratik tecrübem yokken
+Bu projeyi ilk olarak, öğrencilik yıllarımda, CNN ve klasik makine öğrenmesi yöntemleriyle henüz yeterli pratik tecrübem yokken
 denedim. Amacım bitki yapraklarından hastalık sınıflandırması yapmaktı.  
 Ancak veri hazırlama, problem tanımı ve modelleme aşamalarında bazı temel tasarım hataları yaptım.
 
